@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Dictionary - amazon_products</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; color: #333; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .summary-stats { display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0; }
+        .metric-card { background: #f8f9fa; padding: 15px; margin: 10px; border-radius: 5px; border-left: 4px solid #3498db; flex: 1; min-width: 200px; }
+        .section { margin: 30px 0; }
+        .column-card { background: white; border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin: 15px 0; }
+        .column-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .column-name { font-size: 18px; font-weight: bold; color: #2c3e50; }
+        .data-type { background: #e74c3c; color: white; padding: 4px 8px; border-radius: 3px; font-size: 12px; }
+        .flag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; margin-left: 5px; }
+        .flag-primary { background: #27ae60; color: white; }
+        .flag-sensitive { background: #e74c3c; color: white; }
+        .flag-issue { background: #f39c12; color: white; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .detail-item { margin-bottom: 10px; }
+        .detail-label { font-weight: bold; color: #7f8c8d; }
+        .search-box { margin: 20px 0; padding: 10px; width: 100%; border: 1px solid #ddd; border-radius: 5px; }
+        .rules-section { background: #f8f9fa; padding: 20px; border-radius: 5px; }
+        .rule-item { margin: 10px 0; padding: 10px; background: white; border-left: 4px solid #3498db; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Data Dictionary: amazon_products</h1>
+        <p>Generated on: 2025-10-28 21:19:38</p>
+    </div>
+
+    <input type="text" id="searchBox" class="search-box" placeholder="Search columns...">
+
+    <div class="summary-stats">
+        <div class="metric-card">
+            <h3>149,116</h3>
+            <p>Total Rows</p>
+        </div>
+        <div class="metric-card">
+            <h3>11</h3>
+            <p>Total Columns</p>
+        </div>
+        <div class="metric-card">
+            <h3>1</h3>
+            <p>Primary Key Candidates</p>
+        </div>
+        <div class="metric-card">
+            <h3>0</h3>
+            <p>Sensitive Columns</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Column Definitions</h2>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">transaction_id</span>
+                <div>
+                    <span class="data-type">int64</span>
+                    <span class="flag flag-primary">Primary Key</span><span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Unique identifier (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Unique identifier for unique identifier</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 100.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>1, 2, 3</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>currency</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>1.00 to 149456.00 (avg: 74737.37)</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Extremely high uniqueness (possible unique identifier)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">transaction_date</span>
+                <div>
+                    <span class="data-type">object</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Date information (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Date information</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.1%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>01/01/2023, 01/01/2023, 01/01/2023</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>date</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>N/A</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">transaction_time</span>
+                <div>
+                    <span class="data-type">object</span>
+                    
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Time information (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Time information</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 17.3%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>7:06:11, 7:08:56, 7:14:04</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>None detected</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>N/A</div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">transaction_qty</span>
+                <div>
+                    <span class="data-type">int64</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Data column (confidence: low)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Numerical data representing data column</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>2, 2, 2</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>currency</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>1.00 to 8.00 (avg: 1.44)</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">store_id</span>
+                <div>
+                    <span class="data-type">int64</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Unique identifier (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Unique identifier for unique identifier</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>5, 5, 5</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>currency</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>3.00 to 8.00 (avg: 5.34)</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">store_location</span>
+                <div>
+                    <span class="data-type">object</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Data column (confidence: low)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Text data containing data column</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>Lower Manhattan, Lower Manhattan, Lower Manhattan</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>None detected</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>N/A</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">product_id</span>
+                <div>
+                    <span class="data-type">int64</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Unique identifier (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Unique identifier for unique identifier</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.1%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>32, 57, 59</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>currency</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>1.00 to 87.00 (avg: 47.92)</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">unit_price</span>
+                <div>
+                    <span class="data-type">float64</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Monetary value (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Monetary cost or price</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>3.0, 3.1, 4.5</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>currency</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>0.80 to 45.00 (avg: 3.38)</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">product_category</span>
+                <div>
+                    <span class="data-type">object</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Grouping classification (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Grouping classification</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>Coffee, Tea, Drinking Chocolate</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>None detected</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>N/A</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">product_type</span>
+                <div>
+                    <span class="data-type">object</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Classification category (confidence: high)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Classification category</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.0%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>Gourmet brewed coffee, Brewed Chai tea, Hot chocolate</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>None detected</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>N/A</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+        <div class="column-card">
+            <div class="column-header">
+                <span class="column-name">product_detail</span>
+                <div>
+                    <span class="data-type">object</span>
+                    <span class="flag flag-issue">Quality Issues</span>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Business Meaning</div>
+                    <div>Data column (confidence: low)</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Suggested Definition</div>
+                    <div>Text data containing data column</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Data Quality</div>
+                    <div>Completeness: 100.0% | Uniqueness: 0.1%</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Example Values</div>
+                    <div>Ethiopia Rg, Spicy Eye Opener Chai Lg, Dark chocolate Lg</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Detected Patterns</div>
+                    <div>None detected</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-label">Value Range</div>
+                    <div>N/A</div>
+                </div>
+            </div>
+            
+            <div style='margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px;'><strong>Quality Issues:</strong><ul style='margin: 5px 0;'><li>Very low uniqueness (possible constant column)</li></ul></div>
+        </div>
+        
+    </div>
+
+    <div class="section rules-section">
+        <h2>Inferred Business Rules</h2>
+        
+            <div class="rule-item">
+                <strong>transaction_id</strong>: Values must be unique
+                <br><small>Type: uniqueness_constraint | Confidence: high</small>
+            </div>
+            
+            <div class="rule-item">
+                <strong>unit_price</strong>: Should be positive values
+                <br><small>Type: value_constraint | Confidence: high</small>
+            </div>
+            
+    </div>
+
+    <script>
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const columns = document.querySelectorAll('.column-card');
+            
+            columns.forEach(column => {
+                const columnName = column.querySelector('.column-name').textContent.toLowerCase();
+                if (columnName.includes(searchTerm)) {
+                    column.classList.remove('hidden');
+                } else {
+                    column.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+        
